@@ -16,7 +16,7 @@ signal collision
 signal done
 
 func _ready():
-	self.visible = true
+	sprite.set_texture(load(Settings.pertti))
 	
 func _physics_process(delta):
 	if invinsibility > 0:

@@ -18,3 +18,23 @@ func _on_Bloom_pressed():
 	else:
 		bloom.visible = true
 		Settings.bloom = true
+
+
+func _on_Red_pressed():
+	Settings.pertti = "res://Assets/red.png"
+
+
+func _on_Blue_pressed():
+	Settings.pertti = "res://Assets/blue.png"
+
+
+func _on_Pink_pressed():
+	Settings.pertti = "res://Assets/pink.png"
+
+
+func _on_Yellow_pressed():
+	Settings.pertti = "res://Assets/yellow.png"
+
+
+func _on_Green_pressed():
+	Settings.pertti = "res://Assets/green.png"

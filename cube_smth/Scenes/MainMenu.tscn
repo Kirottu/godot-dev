@@ -1,7 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/NotoSans-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/red.png" type="Texture" id=3]
+[ext_resource path="res://Assets/rectangle.png" type="Texture" id=4]
+[ext_resource path="res://Assets/yellow.png" type="Texture" id=5]
+[ext_resource path="res://Assets/blue.png" type="Texture" id=6]
+[ext_resource path="res://Assets/green.png" type="Texture" id=7]
+[ext_resource path="res://Assets/pink.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -116,6 +122,59 @@ material = SubResource( 4 )
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
+
+[node name="Red" type="TextureButton" parent="."]
+margin_left = 20.0
+margin_top = 350.0
+margin_right = 1020.0
+margin_bottom = 1350.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+
+[node name="Blue" type="TextureButton" parent="."]
+margin_left = 90.0
+margin_top = 350.0
+margin_right = 1090.0
+margin_bottom = 1350.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pink" type="TextureButton" parent="."]
+margin_left = 160.0
+margin_top = 350.0
+margin_right = 200.0
+margin_bottom = 390.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 4 )
+
+[node name="Yellow" type="TextureButton" parent="."]
+margin_left = 230.0
+margin_top = 350.0
+margin_right = 1230.0
+margin_bottom = 1350.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+
+[node name="Green" type="TextureButton" parent="."]
+margin_left = 300.0
+margin_top = 350.0
+margin_right = 340.0
+margin_bottom = 390.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 4 )
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="QuitGame" to="." method="_on_QuitGame_pressed"]
 [connection signal="pressed" from="Bloom" to="." method="_on_Bloom_pressed"]
+[connection signal="pressed" from="Red" to="." method="_on_Red_pressed"]
+[connection signal="pressed" from="Blue" to="." method="_on_Blue_pressed"]
+[connection signal="pressed" from="Pink" to="." method="_on_Pink_pressed"]
+[connection signal="pressed" from="Yellow" to="." method="_on_Yellow_pressed"]
+[connection signal="pressed" from="Green" to="." method="_on_Green_pressed"]
