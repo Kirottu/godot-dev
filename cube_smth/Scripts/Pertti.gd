@@ -11,20 +11,22 @@ var destruction = 0
 var invinsibility = 90
 var speed = 500
 var movement = Vector2()
+var halfsize
 
 signal collision
 signal done
 
 func _ready():
 	sprite.set_texture(load(Settings.pertti))
+	halfsize = sprite.scale.x * sprite.texture.get_size().x / 2
 	
 func _physics_process(delta):
 	if invinsibility > 0:
 		invinsibility -= 1
 	
-	if not self.position.x <= 0 and Input.is_action_pressed("ui_left") and !gameover:
+	if not self.position.x - halfsize <= 0 and Input.is_action_pressed("ui_left") and !gameover:
 		movement.x = -speed
-	if not self.position.x >= get_viewport().size.x and Input.is_action_pressed("ui_right") and !gameover:
+	if not self.position.x + halfsize >= get_viewport().size.x and Input.is_action_pressed("ui_right") and !gameover:
 		movement.x = speed
 	move_and_slide(movement)
 	movement.x = 0
